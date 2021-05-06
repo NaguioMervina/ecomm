@@ -17,11 +17,15 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-
-
 Route::get('/shop', function () {
     return view('product');
 });
+
+
+Route::get('/admin', function () {
+    return view('admin/categories');
+});
+
 
 
 Auth::routes();

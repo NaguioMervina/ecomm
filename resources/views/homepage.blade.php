@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 
+{{--TRANSITIONS--}}
 @section('header-feature')
 <ul id="adaptive" class="cs-hidden">
     <li class="item-a">
@@ -46,6 +47,9 @@
                     </li> 
      </ul>
 @endsection
+
+
+
 
 @section('content')
 <div class="search-bar">
