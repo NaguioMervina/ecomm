@@ -26,9 +26,23 @@ Route::get('/admin', function () {
     return view('admin/categories');
 });
 
+Route::get('/add-categories', function () {
+    return view('admin/manage_categories');
+});
+
+Route::get('/product', function () {
+    return view('admin/product');
+});
+
+Route::get('/manage-product', function () {
+    return view('admin/manage_product');
+});
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('userpage');
+Route::get('/user', 'UserController@index')->name('userpage');
+Route::get('/admin', 'AdminController@index')->name('categories');
 

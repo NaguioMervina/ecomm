@@ -1,3 +1,6 @@
+@extends('layouts.admin')
+
+@section('navigation')
 <!doctype html>
 <html class="no-js" lang="">
    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -26,7 +29,7 @@
                      <a href="/admin" > Categories Master</a>
                   </li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="/product" > Product Master</a>
+                     <a href="/admin/product" > Product Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
                      <a href="#" > Order Master</a>
@@ -61,25 +64,30 @@
                </div>
             </div>
          </header>
-         {{--HEADER--}}
-        
-         @yield('content')
+@endsection
 
+@section('content')
+<div class="content pb-0">
+    <div class="animated fadeIn">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-header"><strong>Categories</strong><small> Form</small></div>
+               <form method="post">
+               <div class="card-body card-block">
+                   <div class="form-group">
+                      <label for="company" class=" form-control-label">Categories</label>
+                      <input type="text" name="categories" placeholder="Enter categories name" class="form-control" required></div>
 
-         <div class="clearfix"></div>
-         <footer class="site-footer">
-            <div class="footer-inner bg-white">
-               <div class="row">
-                  <div class="col-sm-6">
-                     Copyright &copy; 2021
-                  </div>
-               </div>
-            </div>
-         </footer>
-      </div>
-      <script src="assets/js/vendor/jquery-2.1.4.min.js" type="text/javascript"></script>
-      <script src="assets/js/popper.min.js" type="text/javascript"></script>
-      <script src="assets/js/plugins.js" type="text/javascript"></script>
-      <script src="assets/js/main.js" type="text/javascript"></script>
-   </body>
-</html>
+                      <button id="payment-button" name="submit" type="submit" class="btn btn-lg btn-info btn-block">
+                   <span id="payment-button-amount">Submit</span>
+                   </button>
+                   <div class="field_error"> amo ya se </div>
+                </div>
+               </form>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+@endsection
